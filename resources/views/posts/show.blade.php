@@ -3,10 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-8">
+        <div class="col-6 d-flex justify-content-end">
             <img src="/storage/{{ $post->image}}">
         </div>
-        <div class="col-4">
+        <div class="col-6">
             <div class="d-flex align-items-center">
                 <div>
                     <img src="{{ $post->user->profile->profileImage() }}" class="rounded-circle"  style="width: 50px">

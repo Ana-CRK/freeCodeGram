@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
+
+Route::get('/', [App\Http\Controllers\PostsController::class, 'feed']);
 
 Route::post('/follow/{user}', [App\Http\Controllers\FollowsController::class, 'store']);
 
